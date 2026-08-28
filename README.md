@@ -84,7 +84,6 @@ This shows the extension immediately, but kids can remove it.
 | [youtube-insert-blocker.crx](youtube-insert-blocker.crx) | Packed extension |
 | [updates.xml](updates.xml) | Chrome update manifest |
 | [install-policy.reg](install-policy.reg) | Chrome + Edge force-install policy |
-| [Install-SelfHostPolicy.ps1](Install-SelfHostPolicy.ps1) | Same policy via PowerShell |
 | [unpacked.zip](unpacked.zip) | Load unpacked (Developer mode) |
 
 Do not publish `*.pem` signing keys or Google’s enrollment `.reg`.

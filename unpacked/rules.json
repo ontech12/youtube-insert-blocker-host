@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||googleapis.com/youtube/v3/search",
+      "initiatorDomains": ["docs.google.com", "slides.google.com", "officeapps.live.com", "office.com", "powerpoint.office.com"],
+      "resourceTypes": ["xmlhttprequest", "other", "sub_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||youtube.com/results",
+      "initiatorDomains": ["docs.google.com", "slides.google.com", "officeapps.live.com", "office.com"],
+      "resourceTypes": ["xmlhttprequest", "other", "sub_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||youtube.com/youtubei/v1/search",
+      "initiatorDomains": ["docs.google.com", "slides.google.com", "officeapps.live.com", "office.com"],
+      "resourceTypes": ["xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||suggestqueries.google.com",
+      "initiatorDomains": ["docs.google.com", "slides.google.com"],
+      "resourceTypes": ["xmlhttprequest", "other"]
+    }
+  }
+]

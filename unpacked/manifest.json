@@ -1,0 +1,88 @@
+{
+  "manifest_version": 3,
+  "name": "Block YouTube Insert in Slides & PowerPoint",
+  "version": "1.0.0",
+  "description": "Disables YouTube video insert, search, and embed menus in Google Slides and PowerPoint for the web.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "YouTube insert is blocked",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/presentation/*",
+        "https://docs.google.com/picker*",
+        "https://slides.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "block.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://*.officeapps.live.com/*",
+        "https://*.office.com/*",
+        "https://powerpoint.office.com/*",
+        "https://www.office.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "block.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://www.youtube-nocookie.com/*"
+      ],
+      "js": [
+        "youtube-frame.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "block_youtube_insert_search",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://docs.google.com/*",
+    "https://slides.google.com/*",
+    "https://*.officeapps.live.com/*",
+    "https://*.office.com/*",
+    "https://www.googleapis.com/*",
+    "https://content.googleapis.com/*",
+    "https://*.youtube.com/*",
+    "https://youtube.googleapis.com/*"
+  ]
+}

@@ -66,6 +66,23 @@ and set it to force-install.
 
 Do **not** turn on Developer mode for this path.
 
+### If it is already installed via Google Admin
+
+GitHub Pages will **not** push toolbar-hide or extensions-page blocking. Those are Admin policies, not part of the `.crx`. You must set them once in Admin; enrolled PCs then pick them up after a Chrome restart.
+
+1. Sign in at [admin.google.com](https://admin.google.com).
+2. **Chrome browser** → **Apps and extensions** (or **Devices** → **Chrome** → **Apps and extensions**).
+3. Open **Block YouTube Insert in Slides & PowerPoint** (`jhnfgifegdmhefpkbpnefelblhgipfjf`).
+4. Installation stays **Force install**. Do **not** pin it to the toolbar.
+5. **Chrome browser** → **Settings** (User & browser settings) → find **URL blocking** / **Block access to a list of URLs**.
+6. Add:
+   - `chrome://extensions`
+   - `chrome://extensions-internals`
+7. Save. On each enrolled PC, fully quit Chrome and reopen it (wait a few minutes if needed).
+8. Confirm: the toolbar icon is not pinned, and `chrome://extensions` is blocked. The extension keeps working in Slides.
+
+Later **code** updates: bump `version` in the extension, replace `youtube-insert-blocker.crx` and `updates.xml` on this repo. Enrolled PCs download that themselves. No Admin re-add.
+
 ---
 
 ## Alternate: Developer mode (no enrollment)

@@ -50,6 +50,8 @@ Direct file: [install-policy.reg](https://ontech12.github.io/youtube-insert-bloc
 
 Fully quit Chrome and open it again. Wait a minute if needed.
 
+The policy also unpins the icon and blocks `chrome://extensions` / `edge://extensions` so kids are less likely to see it. Chrome will not let an extension vanish from that page entirely if someone can still open it.
+
 ### 5. Confirm
 
 - `chrome://policy` should list `ExtensionInstallForcelist` with `jhnfgifegdmhefpkbpnefelblhgipfjf` and `ontech12.github.io`.

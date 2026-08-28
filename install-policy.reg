@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+; Force-install from GitHub Pages for Chrome and Edge.
+; Run as Administrator, then fully quit and reopen Chrome/Edge.
+; Check chrome://policy
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist]
+"1"="jhnfgifegdmhefpkbpnefelblhgipfjf;https://ontech12.github.io/youtube-insert-blocker-host/updates.xml"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallSources]
+"1"="https://ontech12.github.io/youtube-insert-blocker-host/*"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome]
+"ExtensionSettings"="{\"jhnfgifegdmhefpkbpnefelblhgipfjf\":{\"installation_mode\":\"force_installed\",\"update_url\":\"https://ontech12.github.io/youtube-insert-blocker-host/updates.xml\"}}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist]
+"1"="jhnfgifegdmhefpkbpnefelblhgipfjf;https://ontech12.github.io/youtube-insert-blocker-host/updates.xml"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources]
+"1"="https://ontech12.github.io/youtube-insert-blocker-host/*"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"ExtensionSettings"="{\"jhnfgifegdmhefpkbpnefelblhgipfjf\":{\"installation_mode\":\"force_installed\",\"update_url\":\"https://ontech12.github.io/youtube-insert-blocker-host/updates.xml\"}}"

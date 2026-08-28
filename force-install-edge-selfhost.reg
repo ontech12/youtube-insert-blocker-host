@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Same self-host policy for Microsoft Edge.
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist]
+"1"="jhnfgifegdmhefpkbpnefelblhgipfjf;https://ontech12.github.io/youtube-insert-blocker-host/updates.xml"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources]
+"1"="https://ontech12.github.io/youtube-insert-blocker-host/*"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"ExtensionSettings"="{\"jhnfgifegdmhefpkbpnefelblhgipfjf\":{\"installation_mode\":\"force_installed\",\"update_url\":\"https://ontech12.github.io/youtube-insert-blocker-host/updates.xml\"}}"
